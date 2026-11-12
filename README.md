@@ -1,10 +1,10 @@
 # GUI-Portfolio-Template
 
-[![W3C HTML Validation](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/html-validation.yml/badge.svg)](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/html-validation.yml)
-[![Accessibility Check](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/accessibility.yml/badge.svg)](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/accessibility.yml)
-[![CSS Check](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/css-check.yml/badge.svg)](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/css-check.yml)
-[![Link Check](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/link-check.yml/badge.svg)](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/link-check.yml)
-[![Lighthouse Report](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/IDBCourses/kd401b-a3-template/actions/workflows/lighthouse.yml)
+[![W3C HTML Validation](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/html-validation.yml/badge.svg)](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/html-validation.yml)
+[![Accessibility Check](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/accessibility.yml/badge.svg)](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/accessibility.yml)
+[![CSS Check](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/css-check.yml/badge.svg)](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/css-check.yml)
+[![Link Check](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/link-check.yml/badge.svg)](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/link-check.yml)
+[![Lighthouse Report](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/dkadish/kd401b-a3-demo/actions/workflows/lighthouse.yml)
 
 Template for a portfolio project in the GUIs course.
 
