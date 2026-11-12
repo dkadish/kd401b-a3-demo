@@ -1,0 +1,25 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "json": false
+  },
+  "github.copilot.chat.agent.autoFix": false,
+  "github.copilot.chat.agent.currentEditorContext.enabled": false,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+  "github.copilot.chat.customInstructionsInSystemMessage": false,
+  "github.copilot.chat.useProjectTemplates": false,
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.nextEditSuggestions.fixes": false,
+  "github.copilot.renameSuggestions.triggerAutomatically": false,
+  "chat.agent.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "chat.implicitContext.suggestedContext": false,
+  "chat.extensionTools.enabled": false,
+  "chat.showAgentSessionsViewDescription": false
+}

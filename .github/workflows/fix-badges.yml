@@ -1,0 +1,30 @@
+name: Fix README badges
+
+# Runs once in each repo created from the template and points the
+# status badges at that repo instead of the template.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-badges:
+    if: github.repository != 'IDBCourses/kd401b-a3-template'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Point badges at this repo
+        run: |
+          sed -i "s|IDBCourses/kd401b-a3-template|${{ github.repository }}|g" README.md
+          if git diff --quiet; then
+            echo "Badges already correct."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Point README badges at this repository"
+          git push

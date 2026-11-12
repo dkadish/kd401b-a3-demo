@@ -1,0 +1,23 @@
+name: W3C HTML Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Nu HTML Checker
+        run: npm install --prefix /tmp vnu-jar
+
+      - name: Validate every HTML page
+        run: java -jar /tmp/node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html .

@@ -1,0 +1,49 @@
+name: Lighthouse Report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Run Lighthouse on every page
+        run: lhci collect --staticDistDir=. --maxAutodiscoverUrls=0 --numberOfRuns=1 --settings.chromeFlags="--no-sandbox"
+
+      - name: Build Markdown report
+        run: node .github/scripts/lighthouse-report.mjs
+
+      - name: Show report on the run summary page
+        run: cat report/README.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save full HTML reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-html-reports
+          path: .lighthouseci/*.html
+
+      # Only for pushes to main: publish the report to the separate
+      # "reports" branch so it never touches your working branches.
+      - name: Publish report to the reports branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: reports
+          publish_dir: ./report
+          commit_message: Update Lighthouse report

@@ -1,0 +1,27 @@
+name: Accessibility Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install tools
+        run: npm install -g pa11y-ci http-server wait-on
+
+      - name: Check every HTML page (WCAG 2 AA, axe)
+        run: |
+          http-server . -p 8080 -s &
+          wait-on http://localhost:8080
+          URLS=$(find . -name "*.html" -not -path "./node_modules/*" | sed 's|^\./|http://localhost:8080/|')
+          pa11y-ci --config .pa11yci.json $URLS
