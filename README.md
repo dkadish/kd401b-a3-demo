@@ -1,6 +1,6 @@
 # Lighthouse report
 
-Generated 2026-11-13 00:23 UTC from commit `1c4a4d5`.
+Generated 2026-11-13 07:05 UTC from commit `80bd93c`.
 
 | Page | Performance | Accessibility | Best practices | SEO |
 |---|---|---|---|---|
@@ -14,7 +14,7 @@ For full explanations and advice, download **lighthouse-html-reports** from the 
 
 - **Browser errors were logged to the console**
 - **Touch targets do not have sufficient size or spacing.**
-- **Eliminate render-blocking resources** (Est savings of 150 ms)
+- **Eliminate render-blocking resources** (Est savings of 0 ms)
 - **Document does not have a meta description**
 - **Network dependency tree**
 - **Render blocking requests**
