@@ -1,0 +1,15 @@
+:root {
+  --accent-900: hsl(304 66% 35%);
+  --accent-800: hsl(304 66% 40%);
+  --accent-700: hsl(304 66% 45%);
+}
+
+h1 {
+  color: var(--accent-900);
+}
+h2 {
+  color: var(--accent-800);
+}
+h3 {
+  color: var(--accent-700);
+}
