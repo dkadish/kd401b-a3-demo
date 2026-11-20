@@ -1,0 +1,27 @@
+:root {
+  --accent-900: hsl(304 66% 35%);
+  --accent-800: hsl(304 66% 40%);
+  --accent-700: hsl(304 66% 45%);
+  --accent-600: hsl(304 66% 55%);
+  --accent-500: hsl(304 66% 65%);
+
+  --primary-900: hsl(304, 0%, 0%);
+  --primary-800: hsl(304, 10%, 10%);
+  --primary-700: hsl(304, 20%, 20%);
+  --primary-600: hsl(304, 30%, 30%);
+  --primary-600: hsl(304, 40%, 40%);
+}
+
+h1 {
+  color: var(--accent-900);
+}
+h2 {
+  color: var(--accent-800);
+}
+h3 {
+  color: var(--accent-700);
+}
+
+p {
+  color: var(--primary-700);
+}
