@@ -1,0 +1,24 @@
+:root {
+  --header-font: "Agrave Pro", cursive;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 {
+  font-family: var(--header-font);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
