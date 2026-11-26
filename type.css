@@ -1,24 +1,42 @@
+/* Default type set
+   Figma: "Set A · approachable (chosen)", the Default/* text styles.
+   Radio Canada for headings, Source Serif 4 for body text.
+   All sizes are in rem (1rem = 16px at the browser's default setting),
+   so text grows when the user makes their browser's font size bigger.
+   This file only defines the type variables. reading.css redefines them. */
+
 :root {
-  --header-font: "Agrave Pro", cursive;
-}
+  /* Families, with fallbacks in case the web font doesn't load */
+  --font-heading: "Radio Canada", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
 
-h1 {
-  font-family: var(--header-font);
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
+  /* Weights */
+  --weight-heading: 600; /* SemiBold */
+  --weight-h4: 500; /* Medium */
+  --weight-body: 400; /* Regular */
 
-h2 {
-  font-family: var(--header-font);
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
+  /* Type scale: size and line height for each text style */
+  --size-h1: 3rem; /* 48px */
+  --line-h1: 3.5rem; /* 56px */
+  --size-h2: 2.25rem; /* 36px */
+  --line-h2: 2.75rem; /* 44px */
+  --size-h3: 1.625rem; /* 26px */
+  --line-h3: 2.125rem; /* 34px */
+  --size-h4: 1.25rem; /* 20px */
+  --line-h4: 1.75rem; /* 28px */
+  --size-body: 1.125rem; /* 18px */
+  --line-body: 1.875rem; /* 30px */
+  --size-caption: 0.9375rem; /* 15px */
+  --line-caption: 1.375rem; /* 22px */
 
-h3 {
-  font-family: var(--header-font);
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+  /* Letter spacing (em, so it scales with the text) */
+  --spacing-h1: -0.01em;
+  --spacing-h2: -0.005em;
+  --spacing-text: 0;
+
+  /* Space between blocks of text */
+  --space: 1rem; /* 16px */
+
+  /* Line length: no limit in the default set */
+  --max-width: none;
 }

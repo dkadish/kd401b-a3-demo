@@ -1,0 +1,121 @@
+/* Page styles
+   Applies the colour variables (light.css or dark.css) and the
+   type variables (type.css or reading.css) to the page's elements.
+   This file never changes when the user switches mode. */
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  max-width: var(--max-width);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  font-size: var(--size-body);
+  line-height: var(--line-body);
+  letter-spacing: var(--spacing-text);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  color: var(--heading);
+  letter-spacing: 0;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: var(--size-h1);
+  line-height: var(--line-h1);
+  letter-spacing: var(--spacing-h1);
+}
+
+h2 {
+  font-size: var(--size-h2);
+  line-height: var(--line-h2);
+  letter-spacing: var(--spacing-h2);
+}
+
+h3 {
+  font-size: var(--size-h3);
+  line-height: var(--line-h3);
+}
+
+h4 {
+  font-weight: var(--weight-h4);
+  font-size: var(--size-h4);
+  line-height: var(--line-h4);
+}
+
+/* The same space between every block of text, as in the Figma file */
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+blockquote,
+figure {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+}
+
+/* Small, quieter text: the byline, captions and the footer */
+
+.byline,
+figcaption,
+footer p {
+  color: var(--text-muted);
+  font-size: var(--size-caption);
+  line-height: var(--line-caption);
+}
+
+/* Links */
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Bullets in the link lists take the link colour, as in the Figma file */
+nav li,
+aside li {
+  color: var(--link);
+}
+
+/* Quotes and images */
+
+blockquote {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mode buttons */
+
+button {
+  font-family: var(--font-body);
+  font-size: var(--size-caption);
+  color: var(--link);
+  background-color: var(--bg);
+  border: 2px solid var(--link);
+  padding: 0.25rem 0.75rem;
+}
+
+button:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
