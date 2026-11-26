@@ -1,38 +1,16 @@
+/* Dark colour scheme
+   Colours from the Figma file (A3 Example v0.2, "Colour test / Dark").
+   Same variable names as light.css, only the values change. */
+
 :root {
-  --accent-900: hsl(204 66% 35%);
-  --accent-800: hsl(204 66% 40%);
-  --accent-700: hsl(204 66% 45%);
-  --accent-600: hsl(204 66% 55%);
-  --accent-500: hsl(204 66% 65%);
+  --bg: #121419;
+  --text: #f7f8fa;
+  --text-muted: #9aa1ae;
+  --heading: #dce4f6;
+  --accent: #f2a65a;
 
-  --primary-900: hsl(304, 0%, 0%);
-  --primary-800: hsl(304, 10%, 10%);
-  --primary-700: hsl(304, 20%, 20%);
-  --primary-600: hsl(304, 30%, 30%);
-  --primary-500: hsl(304, 50%, 50%);
-  --primary-400: hsl(304, 65%, 65%);
-  --primary-300: hsl(304, 75%, 75%);
-  --primary-200: hsl(304, 85%, 85%);
-  --primary-100: hsl(304, 95%, 95%);
-
-  --background-colour: hsl(304, 0%, 0%);
-}
-
-html {
-  background-color: var(--background-colour);
-  color: var(--primary-100);
-}
-
-h1 {
-  color: var(--primary-400);
-}
-h2 {
-  color: var(--primary-300);
-}
-h3 {
-  color: var(--primary-200);
-}
-
-a {
-  color: var(--accent-500);
+  /* #8ea5de written as HSL; on a dark background the hover shade
+     gets 10% lighter instead of darker */
+  --link: hsl(223 55% 71%);
+  --link-hover: hsl(223 55% 81%);
 }

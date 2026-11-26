@@ -1,0 +1,36 @@
+/* Reading mode (accessible variant of the default type set)
+   Figma: "Reading mode", the Reading/* text styles.
+   Atkinson Hyperlegible Next, larger sizes, more line height and
+   letter spacing, and shorter lines. Same variables as type.css,
+   so the toggle button only has to swap the file. */
+
+:root {
+  --font-heading: "Atkinson Hyperlegible Next", Verdana, sans-serif;
+  --font-body: "Atkinson Hyperlegible Next", Verdana, sans-serif;
+
+  --weight-heading: 700; /* Bold */
+  --weight-h4: 700;
+  --weight-body: 400;
+
+  --size-h1: 3.25rem; /* 52px */
+  --line-h1: 4rem; /* 64px */
+  --size-h2: 2.5rem; /* 40px */
+  --line-h2: 3.25rem; /* 52px */
+  --size-h3: 1.875rem; /* 30px */
+  --line-h3: 2.5rem; /* 40px */
+  --size-h4: 1.5rem; /* 24px */
+  --line-h4: 2.125rem; /* 34px */
+  --size-body: 1.3125rem; /* 21px */
+  --line-body: 2.25rem; /* 36px */
+  --size-caption: 1.0625rem; /* 17px */
+  --line-caption: 1.625rem; /* 26px */
+
+  --spacing-h1: 0;
+  --spacing-h2: 0;
+  --spacing-text: 0.02em; /* 2% */
+
+  --space: 1rem;
+
+  /* Shorter lines are easier to read: 680px in the Figma file */
+  --max-width: 42.5rem;
+}

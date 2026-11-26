@@ -12,3 +12,19 @@ button.addEventListener("click", () => {
     button.textContent = "Light Mode";
   }
 });
+
+// Reading mode: the same pattern, swapping the type file instead of the colours
+const typeLink = document.querySelector("#type");
+const readingButton = document.querySelector("#reading");
+
+readingButton.addEventListener("click", () => {
+  const isReading = typeLink.getAttribute("href") === "reading.css";
+
+  if (isReading) {
+    typeLink.setAttribute("href", "type.css");
+    readingButton.textContent = "Reading Mode";
+  } else {
+    typeLink.setAttribute("href", "reading.css");
+    readingButton.textContent = "Default Type";
+  }
+});
